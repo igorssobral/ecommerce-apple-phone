@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Page</title>
+  </head>
+  <body>
+    <header>
+      <div class="search">
+        <input type="text" placeholder="search" />
+        <img src="assets/icons/search.svg" alt="" />
+      </div>
+
+      <nav>
+        <ul>
+          <a href="#home">Home</a>
+          <a href="#products">produtos</a>
+          <a href="#acessories">Acessorios</a>
+          <a href="#music">Música</a>
+          <a href="#contact">Contact</a>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="home">
+        <div class="content">
+          <h1>O Melhor lugar para comprar.</h1>
+          <p>com preço justo e qualidade.</p>
+          <div class="cards">
+            <div class="card">
+              <img src="./assets/images/mac.png" alt="" />
+              <p>Mac</p>
+            </div>
+            <div class="card">
+              <img src="./assets/images/iphone.png" alt="" />
+              <p>Iphone</p>
+            </div>
+            <div class="card">
+              <img src="./assets/images/ipad.png" alt="" />
+              <p>Ipad</p>
+            </div>
+            <div class="card">
+              <img src="./assets/images/applewatch.png" alt="" />
+              <p>Apple Watch</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="img-content">
+          <div class="desc-img">
+            <p>Apple Watch Series 9</p>
+            <h2>Brilha mais em tudo.</h2>
+            <span>A partir de R$ 4.999</span>
+          </div>
+          <img src="./assets/images/image.png" alt="" />
+        </div>
+      </section>
+
+      <section class="products-section" id="products">
+        <div class="content">
+          <h1>Produtos</h1>
+          <p>Os melhores produtos estão aqui.</p>
+        </div>
+
+        <div class="products">
+          <div class="product">
+            <div class="desc-img">
+              <p>MacBook</p>
+              <h2>Com a Potência</h2>
+              <span>A partir de R$ 9.799</span>
+            </div>
+            <img src="./assets/images/airmac.jpeg" alt="" />
+          </div>
+          <div class="product">
+            <div class="desc-img">
+              <p>Iphone</p>
+              <h2>Titânio</h2>
+              <span>A partir de R$ 5.299</span>
+            </div>
+            <img src="./assets/images/phone.png" alt="" />
+          </div>
+
+          <div class="slideshow-container">
+            <div class="product mySlides fade">
+              <div class="desc-img">
+                <p>MacBook</p>
+                <h2>Com a Potência</h2>
+                <span>A partir de R$ 9.799</span>
+              </div>
+              <img src="./assets/images/airmac.jpeg" alt="" />
+            </div>
+            <div class="product mySlides fade">
+              <div class="desc-img" style="color: black">
+                <p style="color: black">Iphone 15</p>
+                <h2>Uauforia</h2>
+                <span>A partir de R$ 7.299</span>
+              </div>
+              <img src="./assets/images/uaforia.jpeg" alt="" />
+            </div>
+            <div class="product mySlides fade">
+              <div class="desc-img" style="color: black">
+                <p style="color: black">Apple Watch SE</p>
+                <h2>Para amar cada segundo.</h2>
+                <span>A partir de R$ 3.299</span>
+              </div>
+              <img src="./assets/images/watchs.jpeg" alt="" />
+            </div>
+            <div class="product mySlides fade">
+              <div class="desc-img" style="color: black">
+                <p style="color: black">Apple Watch SE</p>
+                <h2>Para amar cada segundo.</h2>
+                <span>A partir de R$ 3.299</span>
+              </div>
+              <img src="./assets/images/ipads.jpeg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="acessories" id="acessories">
+        <div class="content">
+          <h1>Acessórios</h1>
+          <p>Os melhores acessórios estão aqui.</p>
+        </div>
+
+        <div class="listall">
+          <div class="acessorie">
+            <div class="desc-img" style="color: black">
+              <h2>Novas cores</h2>
+              <p style="color: black">
+                Para seus acessórios favoritos lançarem tendências.
+              </p>
+            </div>
+            <img src="./assets/images/acessories.png" alt="" />
+          </div>
+          <div class="carousel-container">
+            <button class="prev" onclick="moveSlide(-1)"><</button>
+            <div class="carousel">
+              <div class="list-acess">
+                <div class="img-list">
+                  <img src="./assets/images/case.png" alt="" />
+                </div>
+                <div>
+                  <span>Novo</span>
+                  <h3>
+                    Capa de silicone com MagSafe para iPhone 15 – Azul-claro
+                  </h3>
+                </div>
+                <p>R$ 569,00</p>
+              </div>
+              <div class="list-acess">
+                <div class="img-list">
+                  <img src="./assets/images/case1.jpeg" alt="" />
+                </div>
+                <div>
+                  <span>Novo</span>
+                  <h3>
+                    Capa de silicone com MagSafe para iPhone 15 – Azul-claro
+                  </h3>
+                </div>
+                <p>R$ 569,00</p>
+              </div>
+              <div class="list-acess">
+                <div class="img-list">
+                  <img src="./assets/images/case2.jpeg" alt="" />
+                </div>
+                <div>
+                  <span>Novo</span>
+                  <h3>
+                    Capa de silicone com MagSafe para iPhone 15 – Azul-claro
+                  </h3>
+                </div>
+                <p>R$ 569,00</p>
+              </div>
+              <div class="list-acess">
+                <div class="img-list">
+                  <img src="./assets/images/case3.jpeg" alt="" />
+                </div>
+                <div>
+                  <span>Novo</span>
+                  <h3>
+                    Capa de silicone com MagSafe para iPhone 15 – Azul-claro
+                  </h3>
+                </div>
+                <p>R$ 569,00</p>
+              </div>
+              <div class="list-acess">
+                <div class="img-list">
+                  <img src="./assets/images/case4.jpeg" alt="" />
+                </div>
+                <div>
+                  <span>Novo</span>
+                  <h3>
+                    Capa de silicone com MagSafe para iPhone 15 – Azul-claro
+                  </h3>
+                </div>
+                <p>R$ 569,00</p>
+              </div>
+            </div>
+            <button class="next" onclick="moveSlide(1)">></button>
+          </div>
+        </div>
+      </section>
+      <section class="fones" id="music">
+        <div class="content">
+          <h1>Música</h1>
+          <p>Opções incomparáveis para um som de alta qualidade.</p>
+        </div>
+
+        <div class="listall">
+          <div class="fone">
+            <div class="desc-img" style="color: black">
+              <h2>Airpods e Beats</h2>
+              <p style="color: black">Qualidade de som incomparável.</p>
+            </div>
+            <img src="./assets/images/fone.jpeg" alt="" />
+          </div>
+          <div class="carousel-container">
+            <button class="prev" onclick="moveSlideFones(-1)"><</button>
+            <div class="carousel fones-carousel">
+              <div class="list-acess list-fones">
+                <div class="img-list">
+                  <img src="./assets/images/fone1.jpeg" alt="" />
+                </div>
+                <div>
+                  <h3>
+                    AirPods Pro (2ª geração) com estojo de recarga MagSafe
+                    (USB‑C)
+                  </h3>
+                </div>
+                <p>R$ 2.599,00</p>
+              </div>
+              <div class="list-acess list-fones">
+                <div class="img-list">
+                  <img src="./assets/images/fone2.jpeg" alt="" />
+                </div>
+                <div>
+                  <h3>AirPods Max - Prateado</h3>
+                  <br />
+                </div>
+                <p>R$ 6.590,00</p>
+              </div>
+              <div class="list-acess list-fones">
+                <div class="img-list">
+                  <img src="./assets/images/fone3.jpeg" alt="" />
+                </div>
+                <div>
+                  <h3>AirPods (3ª geração) com estojo de recarga Lightning</h3>
+                </div>
+                <p>R$ 1.899,00</p>
+              </div>
+              <div class="list-acess list-fones">
+                <div class="img-list">
+                  <img src="./assets/images/fone4.jpeg" alt="" />
+                </div>
+                <div>
+                  <h3>
+                    Beats Studio Buds + O autêntico fone sem fio com
+                    cancelamento de ruído – Translúcido
+                  </h3>
+                </div>
+                <p>R$ 1.799,00</p>
+              </div>
+              <div class="list-acess list-fones">
+                <div class="img-list">
+                  <img src="./assets/images/fone5.jpeg" alt="" />
+                </div>
+                <div>
+                  <h3>
+                    Beats Studio Buds O verdadeiro fone de ouvido sem fio com
+                    cancelamento de ruído – Preto
+                  </h3>
+                </div>
+                <p>R$ 1.599,00</p>
+              </div>
+            </div>
+            <button class="next" onclick="moveSlideFones(1)">></button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
