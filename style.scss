@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+@import "./partials/colors";
+@import "./partials/header";
+@import "./partials/layout";
+
+body{
+    font-family: "Sora", sans-serif;
+    background-color: $white-dark;
+}
+
+a{
+    text-decoration: none;
+}
+
+svg{
+    width: 100%;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
