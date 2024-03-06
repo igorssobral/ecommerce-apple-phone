@@ -1,0 +1,436 @@
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.home,
+.products-section,
+.acessories,
+.fones {
+  width: 70%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  scroll-behavior: smooth;
+  margin-bottom: 30px;
+
+  h1 {
+    font-size: 3rem;
+    color: $zinc-normal;
+  }
+
+  .content > p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-left: 5px;
+    color: $zinc-normal;
+  }
+
+  .cards {
+    display: flex;
+    margin-top: 100px;
+  }
+
+  .card {
+    width: 200px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    overflow: hidden;
+
+    p {
+      font-size: 0.9rem;
+    }
+
+    p:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  .card img {
+    width: 70%;
+    object-fit: cover;
+  }
+
+  .img-content {
+    width: 400px;
+    height: 500px;
+    background-color: $white-light;
+    border-radius: 20px;
+    overflow: hidden;
+
+    img {
+      width: max-content;
+      transition: all 0.5s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .desc-img {
+    min-width: 200px;
+    display: block;
+    position: absolute;
+    padding: 25px;
+    z-index: 99;
+    color: $white-dark;
+
+    p {
+      font-size: 1rem;
+      color: $white-dark;
+      margin-bottom: 20px;
+    }
+
+    span {
+      position: absolute;
+      bottom: 0px;
+    }
+  }
+}
+@media screen and (max-width: 1568px) {
+  .home {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+
+    .content {
+      h1 {
+        width: 80%;
+      }
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      margin-top: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .content {
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+.products-section {
+  flex-direction: column;
+
+  .content > h1 {
+    font-size: 2rem;
+  }
+
+  .products {
+    display: flex;
+    margin-top: 30px;
+    gap: 70px;
+  }
+
+  .product {
+    width: 400px;
+    height: 500px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 1px 1px 15px 1px rgb(177, 177, 177);
+    transition: all 0.5s ease;
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 1px 1px 15px 3px rgb(177, 177, 177);
+    }
+  }
+}
+
+@media screen and (max-width: 1568px) {
+  .products-section {
+    width: 80%;
+    justify-content: start;
+
+    .product {
+      width: 300px;
+      height: 400px;
+
+      h2 {
+        width: 250px;
+        font-size: 1.4rem;
+      }
+      span {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .products-section {
+    width: 100%;
+
+    .product {
+      width: 90%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slideshow-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .content{
+    margin-left: 20px;
+  }
+}
+
+.acessories,
+.fones {
+  flex-direction: column;
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .acessorie,
+  .fone {
+    width: 400px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .listall {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .desc-img {
+    width: 400px;
+  }
+
+  .list-acess {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: $white-light;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.068);
+    cursor: pointer;
+
+    span {
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: $red-normal;
+    }
+
+    h3 {
+      font-weight: 600;
+      font-size: 1.1rem;
+      width: 280px;
+    }
+
+    p {
+      margin-top: 10px;
+      width: 100%;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+
+    &:hover {
+      transform: scale(1.01);
+      box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.151);
+    }
+  }
+
+  .carousel-container {
+    width: 75%;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .list-acess {
+    flex: 0 0 auto;
+    margin-right: 30px;
+  }
+
+  .prev,
+  .next {
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.219);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    z-index: 1000;
+    cursor: pointer;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
+  .img-list {
+    width: 300px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+    }
+  }
+}
+
+@media screen and (max-width: 1568px) {
+  .acessories,
+  .fones {
+    width: 80%;
+    justify-content: start;
+  }
+  .listall {
+    .list-acess {
+      width: 250px;
+
+      span,
+      h3,
+      p {
+        margin-left: 10px;
+      }
+      span {
+        font-size: 0.7rem;
+      }
+
+      h3 {
+        font-size: 0.8rem;
+        width: 200px;
+      }
+
+      p {
+        margin-top: 10px;
+        width: max-content;
+        font-size: 0.9rem;
+        text-align: justify;
+      }
+    }
+    .img-list {
+      width: 290px;
+      height: 290px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      img {
+        width: 250px;
+        height: 250px;
+      }
+    }
+
+    .carousel-container {
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .acessories,
+  .fones {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .listall {
+    flex-direction: column;
+
+    .list-acess {
+      width: 200px;
+
+      span,
+      h3,
+      p {
+        margin-left: 10px;
+      }
+      span {
+        font-size: 0.7rem;
+      }
+
+      h3 {
+        font-size: 0.8rem;
+        width: 200px;
+      }
+
+      p {
+        margin-top: 10px;
+        width: max-content;
+        font-size: 0.9rem;
+        text-align: justify;
+      }
+    }
+    .img-list {
+      width: 200px;
+      height: 290px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      img {
+        width: 250px;
+        height: 250px;
+      }
+    }
+
+    .carousel-container {
+      width: 100%;
+    }
+  }
+}
