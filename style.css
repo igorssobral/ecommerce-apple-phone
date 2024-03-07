@@ -18,11 +18,55 @@ header ul {
   list-style: none;
   gap: 20px;
 }
+header ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 header ul a {
+  display: flex;
   color: #4e4e4e;
+}
+header ul a img {
+  width: 15px;
+  margin: auto;
 }
 header ul a:hover {
   color: #090d11;
+}
+header .dropbtn img {
+  transition: transform 0.3s ease;
+}
+header .dropdown {
+  position: relative;
+  display: inline-block;
+  transition: all 0.5s ease-in-out;
+}
+header .dropdown:hover img {
+  transform: rotate(180deg);
+}
+header .dropdown:hover .dropdown-content {
+  display: block;
+}
+header .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fefbff;
+  min-width: 200px;
+  padding: 10px;
+  z-index: 1000;
+  border: 1px solid rgba(0, 0, 0, 0.103);
+  border-radius: 10px;
+}
+header .dropdown .dropdown-content a {
+  color: #1a1a1a;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-radius: 10px;
+  display: block;
+}
+header .dropdown .dropdown-content a:hover {
+  background-color: #edeaef;
 }
 header .search {
   display: flex;
@@ -30,7 +74,7 @@ header .search {
 }
 header input {
   width: 200px;
-  height: 25px;
+  height: 30px;
   font-size: 1.1rem;
   padding-left: 5px;
   background-color: #edeaef;
@@ -48,6 +92,7 @@ header ::placeholder {
 }
 header img {
   width: 20px;
+  cursor: pointer;
 }
 @media screen and (max-width: 768px) {
   header input {
@@ -132,8 +177,8 @@ main {
 .products-section .img-content,
 .acessories .img-content,
 .fones .img-content {
-  width: 400px;
-  height: 500px;
+  width: 390px;
+  height: 490px;
   background-color: #fefbff;
   border-radius: 20px;
   overflow: hidden;
@@ -160,7 +205,7 @@ main {
   display: block;
   position: absolute;
   padding: 25px;
-  z-index: 99;
+  z-index: 100;
   color: #edeaef;
 }
 .home .desc-img p,
@@ -450,6 +495,17 @@ main {
     width: 100%;
     flex-direction: column;
   }
+  .acessories .acessorie,
+  .acessories .fone,
+  .fones .acessorie,
+  .fones .fone {
+    width: 390px;
+    height: 490px;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    overflow: hidden;
+  }
   .listall {
     flex-direction: column;
   }
@@ -470,22 +526,20 @@ main {
   }
   .listall .list-acess p {
     margin-top: 10px;
-    width: -moz-max-content;
-    width: max-content;
+    width: 100%;
     font-size: 0.9rem;
-    text-align: justify;
   }
   .listall .img-list {
     width: 200px;
-    height: 290px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
   }
   .listall .img-list img {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
   }
   .listall .carousel-container {
     width: 100%;
