@@ -109,7 +109,9 @@ header img {
 
 main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .home,
@@ -184,8 +186,8 @@ main {
 .products-section .img-content,
 .acessories .img-content,
 .fones .img-content {
-  width: 390px;
-  height: 490px;
+  width: 380px;
+  height: 480px;
   background-color: #fefbff;
   border-radius: 20px;
   overflow: hidden;
@@ -261,6 +263,10 @@ main {
   }
   .home .content h1 {
     text-align: center;
+  }
+  .home .img-content {
+    width: 350px;
+    height: 450px;
   }
   .home .cards {
     display: grid;
@@ -343,8 +349,8 @@ main {
 .acessories .fone,
 .fones .acessorie,
 .fones .fone {
-  width: 400px;
-  height: 500px;
+  width: 390px;
+  height: 490px;
   display: flex;
   justify-content: center;
   border-radius: 20px;
@@ -516,8 +522,8 @@ main {
   .acessories .fone,
   .fones .acessorie,
   .fones .fone {
-    width: 390px;
-    height: 490px;
+    width: 370px;
+    height: 470px;
     display: flex;
     justify-content: center;
     border-radius: 20px;
@@ -559,7 +565,7 @@ main {
     height: 200px;
   }
   .listall .carousel-container {
-    width: 100%;
+    width: 95%;
   }
 }
 body {
