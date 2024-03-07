@@ -57,8 +57,8 @@ main {
   }
 
   .img-content {
-    width: 400px;
-    height: 500px;
+    width: 390px;
+    height: 490px;
     background-color: $white-light;
     border-radius: 20px;
     overflow: hidden;
@@ -78,7 +78,7 @@ main {
     display: block;
     position: absolute;
     padding: 25px;
-    z-index: 99;
+    z-index: 100;
     color: $white-dark;
 
     p {
@@ -385,8 +385,23 @@ main {
   .acessories,
   .fones {
     width: 100%;
-    flex-direction: column;
+    flex-direction: column; 
+    
+
+    .acessorie,
+  .fone {
+    width: 390px;
+    height: 490px;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    overflow: hidden;
   }
+   
+  }
+  
+
+
 
   .listall {
     flex-direction: column;
@@ -410,22 +425,21 @@ main {
 
       p {
         margin-top: 10px;
-        width: max-content;
+        width: 100%;
         font-size: 0.9rem;
-        text-align: justify;
       }
     }
     .img-list {
       width: 200px;
-      height: 290px;
+      height: 250px;
       display: flex;
       justify-content: center;
       align-items: center;
       overflow: hidden;
 
       img {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
       }
     }
 

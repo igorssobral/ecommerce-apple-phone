@@ -11,11 +11,64 @@ header {
     list-style: none;
     gap: 20px;
 
-    a{
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    a {
+      display: flex;
       color: $zinc-normal;
 
-      &:hover{
+      img {
+        width: 15px;
+        margin: auto;
+      }
+
+      &:hover {
         color: $secondary-normal;
+      }
+    }
+  }
+  .dropbtn img {
+    transition: transform 0.3s ease;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    transition: all 0.5s ease-in-out;
+
+    &:hover img {
+      transform: rotate(180deg);
+    }
+
+    &:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: $white-light;
+      min-width: 200px;
+      padding: 10px;
+      z-index: 1000;
+      border: 1px solid rgba(0, 0, 0, 0.103);
+      border-radius: 10px;
+      
+      
+      a {
+        color: $zinc-dark;
+        padding: 12px 16px;
+        text-decoration: none;
+        border-radius: 10px;
+        display: block;
+
+        &:hover {
+          background-color: $white-dark;
+        }
       }
     }
   }
@@ -24,9 +77,10 @@ header {
     display: flex;
     gap: 5px;
   }
+  
   input {
     width: 200px;
-    height: 25px;
+    height: 30px;
     font-size: 1.1rem;
     padding-left: 5px;
     background-color: $white-dark;
@@ -42,6 +96,7 @@ header {
 
   img {
     width: 20px;
+    cursor: pointer;
   }
 
   @media screen and (max-width: 768px) {
