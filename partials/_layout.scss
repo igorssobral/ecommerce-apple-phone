@@ -7,7 +7,10 @@
 
 main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  
 }
 
 .home,
@@ -64,8 +67,8 @@ main {
   }
 
   .img-content {
-    width: 390px;
-    height: 490px;
+    width: 380px;
+    height: 480px;
     background-color: $white-light;
     border-radius: 20px;
     overflow: hidden;
@@ -127,6 +130,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 
     .content {
       display: flex;
@@ -138,6 +142,11 @@ main {
         text-align: center;
       }
     
+    }
+
+    .img-content{
+      width: 350px;
+      height: 450px;
     }
 
     .cards {
@@ -237,8 +246,8 @@ main {
 
   .acessorie,
   .fone {
-    width: 400px;
-    height: 500px;
+    width: 390px;
+    height: 490px;
     display: flex;
     justify-content: center;
     border-radius: 20px;
@@ -416,8 +425,8 @@ main {
 
     .acessorie,
   .fone {
-    width: 390px;
-    height: 490px;
+    width: 370px;
+    height: 470px;
     display: flex;
     justify-content: center;
     border-radius: 20px;
@@ -470,7 +479,7 @@ main {
     }
 
     .carousel-container {
-      width: 100%;
+      width: 95%;
     }
   }
 }
