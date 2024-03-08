@@ -72,7 +72,7 @@ header .search {
   display: flex;
   gap: 5px;
 }
-header input {
+header .search input {
   width: 200px;
   height: 30px;
   font-size: 1.1rem;
@@ -82,6 +82,27 @@ header input {
   border: none;
   border-radius: 8px;
 }
+header .search .search-click {
+  display: none;
+  width: 300px;
+  height: 100px;
+  position: absolute;
+  margin-top: 45px;
+  border-radius: 15px;
+  background-color: #fefbff;
+}
+header .search img {
+  width: 20px;
+  cursor: pointer;
+}
+header .search:hover .search-click {
+  display: block;
+}
+header form {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
 header ::-moz-placeholder {
   color: #afafaf;
   font-size: 1rem;
@@ -89,15 +110,6 @@ header ::-moz-placeholder {
 header ::placeholder {
   color: #afafaf;
   font-size: 1rem;
-}
-header img {
-  width: 20px;
-  cursor: pointer;
-}
-@media screen and (max-width: 768px) {
-  header input {
-    display: none;
-  }
 }
 
 * {
@@ -115,6 +127,7 @@ main {
 }
 
 .home,
+.details-pay,
 .products-section,
 .acessories,
 .fones {
@@ -126,6 +139,7 @@ main {
   margin-bottom: 30px;
 }
 .home h1,
+.details-pay h1,
 .products-section h1,
 .acessories h1,
 .fones h1 {
@@ -133,6 +147,7 @@ main {
   color: #4e4e4e;
 }
 .home .content > p,
+.details-pay .content > p,
 .products-section .content > p,
 .acessories .content > p,
 .fones .content > p {
@@ -142,6 +157,7 @@ main {
   color: #4e4e4e;
 }
 .home .cards,
+.details-pay .cards,
 .products-section .cards,
 .acessories .cards,
 .fones .cards {
@@ -149,6 +165,7 @@ main {
   margin-top: 100px;
 }
 .home .card,
+.details-pay .card,
 .products-section .card,
 .acessories .card,
 .fones .card {
@@ -162,12 +179,14 @@ main {
   overflow: hidden;
 }
 .home .card p,
+.details-pay .card p,
 .products-section .card p,
 .acessories .card p,
 .fones .card p {
   font-size: 0.9rem;
 }
 .home .card p:hover,
+.details-pay .card p:hover,
 .products-section .card p:hover,
 .acessories .card p:hover,
 .fones .card p:hover {
@@ -175,6 +194,7 @@ main {
   cursor: pointer;
 }
 .home .card img,
+.details-pay .card img,
 .products-section .card img,
 .acessories .card img,
 .fones .card img {
@@ -183,6 +203,7 @@ main {
      object-fit: cover;
 }
 .home .img-content,
+.details-pay .img-content,
 .products-section .img-content,
 .acessories .img-content,
 .fones .img-content {
@@ -193,6 +214,7 @@ main {
   overflow: hidden;
 }
 .home .img-content img,
+.details-pay .img-content img,
 .products-section .img-content img,
 .acessories .img-content img,
 .fones .img-content img {
@@ -201,12 +223,14 @@ main {
   transition: all 0.5s ease;
 }
 .home .img-content img:hover,
+.details-pay .img-content img:hover,
 .products-section .img-content img:hover,
 .acessories .img-content img:hover,
 .fones .img-content img:hover {
   transform: scale(1.1);
 }
 .home .desc-img,
+.details-pay .desc-img,
 .products-section .desc-img,
 .acessories .desc-img,
 .fones .desc-img {
@@ -218,6 +242,7 @@ main {
   color: #edeaef;
 }
 .home .desc-img p,
+.details-pay .desc-img p,
 .products-section .desc-img p,
 .acessories .desc-img p,
 .fones .desc-img p {
@@ -226,6 +251,7 @@ main {
   margin-bottom: 20px;
 }
 .home .desc-img span,
+.details-pay .desc-img span,
 .products-section .desc-img span,
 .acessories .desc-img span,
 .fones .desc-img span {
@@ -233,6 +259,36 @@ main {
   bottom: 0px;
 }
 
+.details-pay {
+  justify-content: start;
+  gap: 25px;
+}
+.details-pay div {
+  width: 350px;
+  height: 270px;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: #fefbff;
+  box-shadow: 0px 0px 10px 1px rgba(224, 224, 224, 0.658);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.details-pay div:hover {
+  box-shadow: 0px 0px 10px 3px rgba(160, 160, 160, 0.356);
+  transform: scale(1.01);
+}
+.details-pay h1 {
+  color: #040f1a;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .details-pay {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 @media screen and (max-width: 1568px) {
   .home {
     width: 80%;
@@ -319,7 +375,8 @@ main {
   .products-section {
     width: 100%;
   }
-  .products-section .content h1, .products-section .content p {
+  .products-section .content h1,
+  .products-section .content p {
     margin-left: 20px;
   }
   .products-section .product {
@@ -392,10 +449,10 @@ main {
   font-weight: 600;
   font-size: 1.1rem;
   width: 280px;
+  min-height: 100px;
 }
 .acessories .list-acess p,
 .fones .list-acess p {
-  margin-top: 10px;
   width: 100%;
   font-size: 0.9rem;
   text-align: left;
@@ -469,7 +526,8 @@ main {
     width: 80%;
     justify-content: start;
   }
-  .acessories .content h1, .acessories .content p,
+  .acessories .content h1,
+  .acessories .content p,
   .fones .content h1,
   .fones .content p {
     margin-left: 20px;
@@ -534,6 +592,7 @@ main {
   }
   .listall .list-acess {
     width: 200px;
+    height: 370px;
   }
   .listall .list-acess span,
   .listall .list-acess h3,
