@@ -16,15 +16,23 @@
   <body>
     <header>
       <div class="search">
-        <input type="text" placeholder="search" />
         <img src="assets/icons/search.svg" alt="" />
+
+        <div class="search-click">
+          <form >
+            <label for="search">Busque </label>
+            <input id="search" type="text" placeholder="search" />
+          </form>
+        </div>
       </div>
 
       <nav>
         <ul>
           <li><a href="#home">Home</a></li>
           <li class="dropdown">
-            <a href="#" class="dropbtn">Produtos <img src="assets/icons/chevron-down-outline.svg" alt="" ></a>
+            <a href="#" class="dropbtn"
+              >Produtos <img src="assets/icons/chevron-down-outline.svg" alt=""
+            /></a>
             <div class="dropdown-content">
               <a href="#products">Produtos em Geral</a>
               <a href="#acessories">Acessórios</a>
@@ -67,6 +75,23 @@
             <span>A partir de R$ 4.999</span>
           </div>
           <img src="./assets/images/image.png" alt="" />
+        </div>
+      </section>
+
+      <section class="details-pay">
+        <div>
+          <img src="assets/icons/package.svg" alt="" />
+          <h1>Frete grátis em todos os pedidos.</h1>
+        </div>
+        <div>
+          <img src="assets/icons/card.svg" alt="" />
+          <h1>Várias opções de parcelamento.</h1>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <img src="./assets/icons/cartao.svg" alt="" />
         </div>
       </section>
 
@@ -250,7 +275,6 @@
                 </div>
                 <div>
                   <h3>AirPods Max - Prateado</h3>
-                  <br />
                 </div>
                 <p>R$ 6.590,00</p>
               </div>
@@ -271,9 +295,10 @@
                   <h3>
                     Beats Studio Buds + O autêntico fone sem fio com
                     cancelamento de ruído – Translúcido
-                  </h3>
+                  </h3> 
+                  <p>R$ 1.799,00</p>
                 </div>
-                <p>R$ 1.799,00</p>
+               
               </div>
               <div class="list-acess list-fones">
                 <div class="img-list">
@@ -291,6 +316,10 @@
             <button class="next" onclick="moveSlideFones(1)">></button>
           </div>
         </div>
+      </section>
+
+      <section>
+        
       </section>
     </main>
     <script src="script.js"></script>
