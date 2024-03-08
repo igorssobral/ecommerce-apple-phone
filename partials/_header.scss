@@ -76,32 +76,52 @@ header {
   .search {
     display: flex;
     gap: 5px;
+
+    input {
+      width: 200px;
+      height: 30px;
+      font-size: 1.1rem;
+      padding-left: 5px;
+      background-color: $white-dark;
+      outline: none;
+      border: none;
+      border-radius: 8px;
+    }
+  
+    .search-click{
+      display: none;
+      width: 300px;
+      height: 100px;
+      position: absolute;
+      margin-top: 45px;
+      
+      border-radius: 15px;
+      background-color: $white-light;
+    }
+  
+   
+  
+    img {
+      width: 20px;
+      cursor: pointer;
+  
+  
+    
+    }  &:hover .search-click{
+        display: block;
+      }
+  }
+
+  form{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
   }
   
-  input {
-    width: 200px;
-    height: 30px;
-    font-size: 1.1rem;
-    padding-left: 5px;
-    background-color: $white-dark;
-    outline: none;
-    border: none;
-    border-radius: 8px;
-  }
-
-  ::placeholder {
-    color: $zinc-light;
-    font-size: 1rem;
-  }
-
-  img {
-    width: 20px;
-    cursor: pointer;
-  }
-
-  @media screen and (max-width: 768px) {
-    input {
-      display: none;
+   ::placeholder {
+      color: $zinc-light;
+      font-size: 1rem;
     }
-  }
+
+ 
 }

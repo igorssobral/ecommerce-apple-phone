@@ -10,10 +10,10 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 
 .home,
+.details-pay,
 .products-section,
 .acessories,
 .fones {
@@ -103,6 +103,38 @@ main {
     }
   }
 }
+
+.details-pay {
+  justify-content: start;
+  gap: 25px;
+  div {
+    width: 350px;
+    height: 270px;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: $white-light;
+    box-shadow: 0px 0px 10px 1px rgba(224, 224, 224, 0.658);
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0px 0px 10px 3px rgba(160, 160, 160, 0.356);
+      transform: scale(1.01);
+    }
+  }
+  h1 {
+    color: $primary-dark;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+}
+@media screen and (max-width: 768px) {
+  .details-pay {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 @media screen and (max-width: 1568px) {
   .home {
     width: 80%;
@@ -130,21 +162,18 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 
     .content {
       display: flex;
       flex-direction: column;
       align-items: center;
 
-      
-      h1{
+      h1 {
         text-align: center;
       }
-    
     }
 
-    .img-content{
+    .img-content {
       width: 350px;
       height: 450px;
     }
@@ -208,9 +237,9 @@ main {
   .products-section {
     width: 100%;
 
-
-    .content{
-      h1,p{
+    .content {
+      h1,
+      p {
         margin-left: 20px;
       }
     }
@@ -232,8 +261,6 @@ main {
     display: flex;
     justify-content: center;
   }
-
- 
 }
 
 .acessories,
@@ -288,10 +315,10 @@ main {
       font-weight: 600;
       font-size: 1.1rem;
       width: 280px;
+      min-height: 100px;
     }
 
     p {
-      margin-top: 10px;
       width: 100%;
       font-size: 0.9rem;
       text-align: left;
@@ -365,8 +392,9 @@ main {
     width: 80%;
     justify-content: start;
 
-    .content{
-      h1,p{
+    .content {
+      h1,
+      p {
         margin-left: 20px;
       }
     }
@@ -420,29 +448,25 @@ main {
   .acessories,
   .fones {
     width: 100%;
-    flex-direction: column; 
-    
+    flex-direction: column;
 
     .acessorie,
-  .fone {
-    width: 370px;
-    height: 470px;
-    display: flex;
-    justify-content: center;
-    border-radius: 20px;
-    overflow: hidden;
+    .fone {
+      width: 370px;
+      height: 470px;
+      display: flex;
+      justify-content: center;
+      border-radius: 20px;
+      overflow: hidden;
+    }
   }
-   
-  }
-  
-
-
 
   .listall {
     flex-direction: column;
 
     .list-acess {
       width: 200px;
+      height: 370px;
 
       span,
       h3,

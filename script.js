@@ -14,12 +14,12 @@ function moveSlide(direction) {
   currentIndex += direction;
 
   if (currentIndex < 0) {
-    currentIndex = totalSlides - 2;
+    currentIndex = totalSlides - 1;
   } else if (currentIndex >= totalSlides) {
     currentIndex = 0;
   }
 
-  const newPosition = -(currentIndex * slideWidth) + "px";
+  const newPosition = -(currentIndex * slideWidth) / 0.91 + "px";
   document.querySelector(
     ".carousel"
   ).style.transform = `translateX(${newPosition})`;
@@ -42,7 +42,7 @@ function moveSlideFones(direction) {
     currentIndexFones = 0;
   }
 
-  const newPosition = -(currentIndexFones * slideWidthFones) + "px";
+  const newPosition = -(currentIndexFones * slideWidthFones) / 0.91 + "px";
   document.querySelector(
     ".fones-carousel"
   ).style.transform = `translateX(${newPosition})`;
