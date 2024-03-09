@@ -123,14 +123,14 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 .home,
 .details-pay,
 .products-section,
 .acessories,
-.fones {
+.fones,
+.suport {
   width: 70%;
   margin-top: 40px;
   display: flex;
@@ -142,15 +142,25 @@ main {
 .details-pay h1,
 .products-section h1,
 .acessories h1,
-.fones h1 {
+.fones h1,
+.suport h1 {
   font-size: 3rem;
   color: #4e4e4e;
 }
-.home .content > p,
-.details-pay .content > p,
-.products-section .content > p,
-.acessories .content > p,
-.fones .content > p {
+.home .content h1,
+.details-pay .content h1,
+.products-section .content h1,
+.acessories .content h1,
+.fones .content h1,
+.suport .content h1 {
+  font-size: 2rem;
+}
+.home .content p,
+.details-pay .content p,
+.products-section .content p,
+.acessories .content p,
+.fones .content p,
+.suport .content p {
   font-size: 1.1rem;
   font-weight: 300;
   margin-left: 5px;
@@ -160,7 +170,8 @@ main {
 .details-pay .cards,
 .products-section .cards,
 .acessories .cards,
-.fones .cards {
+.fones .cards,
+.suport .cards {
   display: flex;
   margin-top: 100px;
 }
@@ -168,7 +179,8 @@ main {
 .details-pay .card,
 .products-section .card,
 .acessories .card,
-.fones .card {
+.fones .card,
+.suport .card {
   width: 200px;
   height: 150px;
   display: flex;
@@ -182,14 +194,16 @@ main {
 .details-pay .card p,
 .products-section .card p,
 .acessories .card p,
-.fones .card p {
+.fones .card p,
+.suport .card p {
   font-size: 0.9rem;
 }
 .home .card p:hover,
 .details-pay .card p:hover,
 .products-section .card p:hover,
 .acessories .card p:hover,
-.fones .card p:hover {
+.fones .card p:hover,
+.suport .card p:hover {
   text-decoration: underline;
   cursor: pointer;
 }
@@ -197,7 +211,8 @@ main {
 .details-pay .card img,
 .products-section .card img,
 .acessories .card img,
-.fones .card img {
+.fones .card img,
+.suport .card img {
   width: 70%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -206,7 +221,8 @@ main {
 .details-pay .img-content,
 .products-section .img-content,
 .acessories .img-content,
-.fones .img-content {
+.fones .img-content,
+.suport .img-content {
   width: 380px;
   height: 480px;
   background-color: #fefbff;
@@ -217,7 +233,8 @@ main {
 .details-pay .img-content img,
 .products-section .img-content img,
 .acessories .img-content img,
-.fones .img-content img {
+.fones .img-content img,
+.suport .img-content img {
   width: -moz-max-content;
   width: max-content;
   transition: all 0.5s ease;
@@ -226,14 +243,16 @@ main {
 .details-pay .img-content img:hover,
 .products-section .img-content img:hover,
 .acessories .img-content img:hover,
-.fones .img-content img:hover {
+.fones .img-content img:hover,
+.suport .img-content img:hover {
   transform: scale(1.1);
 }
 .home .desc-img,
 .details-pay .desc-img,
 .products-section .desc-img,
 .acessories .desc-img,
-.fones .desc-img {
+.fones .desc-img,
+.suport .desc-img {
   min-width: 200px;
   display: block;
   position: absolute;
@@ -245,7 +264,8 @@ main {
 .details-pay .desc-img p,
 .products-section .desc-img p,
 .acessories .desc-img p,
-.fones .desc-img p {
+.fones .desc-img p,
+.suport .desc-img p {
   font-size: 1rem;
   color: #edeaef;
   margin-bottom: 20px;
@@ -254,7 +274,8 @@ main {
 .details-pay .desc-img span,
 .products-section .desc-img span,
 .acessories .desc-img span,
-.fones .desc-img span {
+.fones .desc-img span,
+.suport .desc-img span {
   position: absolute;
   bottom: 0px;
 }
@@ -332,9 +353,6 @@ main {
 .products-section {
   flex-direction: column;
 }
-.products-section .content > h1 {
-  font-size: 2rem;
-}
 .products-section .products {
   display: flex;
   margin-top: 30px;
@@ -397,10 +415,6 @@ main {
 .acessories,
 .fones {
   flex-direction: column;
-}
-.acessories .content h1,
-.fones .content h1 {
-  font-size: 2rem;
 }
 .acessories .acessorie,
 .acessories .fone,
@@ -627,6 +641,121 @@ main {
     width: 95%;
   }
 }
+.suport {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 25px;
+}
+.suport .cards-suport {
+  display: flex;
+  gap: 25px;
+}
+.suport .cards-suport div {
+  width: 350px;
+  height: 270px;
+  padding: 40px;
+  border-radius: 20px;
+  background-color: #fefbff;
+  box-shadow: 0px 0px 10px 1px rgba(224, 224, 224, 0.658);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.suport .cards-suport div:hover {
+  box-shadow: 0px 0px 10px 3px rgba(160, 160, 160, 0.356);
+  transform: scale(1.01);
+}
+.suport .cards-suport h1 {
+  color: #040f1a;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.suport .summarys h1 {
+  font-size: 1.3rem;
+}
+.suport .summary-container {
+  display: flex;
+  gap: 150px;
+  align-items: center;
+}
+.suport .summary-content {
+  width: 550px;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 25px;
+  margin-top: 20px;
+  border-radius: 15px;
+  background-color: #fefbff;
+}
+.suport .summary-content details {
+  font-size: 1.1rem;
+  padding: 10px;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+.suport .summary-content details p {
+  width: 500px;
+  font-size: 0.9rem;
+  padding: 20px;
+}
+.suport .summary-content details {
+  overflow: hidden;
+  max-height: 70px;
+  transition: max-height 0.5s ease-in-out, opacity 0.3s ease-out;
+}
+.suport .summary-content details[open] {
+  max-height: 300px;
+  opacity: 1;
+}
+.suport .img-suport img {
+  width: 80%;
+}
+
+@media screen and (max-width: 768px) {
+  .suport {
+    width: 90%;
+  }
+  .suport .cards-suport {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .suport .summary-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .suport .summary-container .summary-content {
+    width: 370px;
+    justify-content: center;
+  }
+  .suport .summary-container .summary-content details {
+    max-height: 65px;
+    transition: max-height 1s ease-in-out, opacity 0.3s ease-out;
+  }
+  .suport .summary-container .summary-content details summary {
+    font-size: 1rem;
+  }
+  .suport .summary-container .summary-content details p {
+    padding: 5px;
+    width: 310px;
+    color: #4e4e4e;
+  }
+  .suport .summary-container .summary-content details[open] {
+    max-height: 400px;
+    opacity: 1;
+  }
+  .suport .summary-container .summary-content details[open] p {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+  }
+  .suport .summary-container .img-suport img {
+    width: 100%;
+  }
+}
+.icon {
+  color: #68cc45;
+  font-size: 3rem;
+}
+
 body {
   font-family: "Sora", sans-serif;
   background-color: #edeaef;
