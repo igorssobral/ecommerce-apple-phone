@@ -1,4 +1,3 @@
-// Declaração de variáveis globais
 let currentIndex = 0;
 let slideIndex = 0;
 let currentIndexFones = 0;
@@ -6,21 +5,11 @@ const slidesFones = document.querySelectorAll(".listall .list-fones");
 const totalSlidesFones = slidesFones.length;
 const slideWidthFones = slidesFones[0].clientWidth;
 
-// Função para exibir os slides automaticamente
-function showSlides() {
-  let slides = document.getElementsByClassName("mySlides");
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  }
-  slides[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 1500); // Define o intervalo de tempo para troca de slides (1500 milissegundos = 1.5 segundos)
-}
+showSlides();
+const slides = document.querySelectorAll(".list-acess");
+const totalSlides = slides.length;
+const slideWidth = slides[0].clientWidth;
 
-// Função para mover os slides no carrossel principal
 function moveSlide(direction) {
   currentIndex += direction;
 
@@ -31,21 +20,19 @@ function moveSlide(direction) {
   }
 
   const newPosition = -(currentIndex * slideWidth) / 0.91 + "px";
-  document.querySelector(".carousel").style.transform = `translateX(${newPosition})`;
+  document.querySelector(
+    ".carousel"
+  ).style.transform = `translateX(${newPosition})`;
 }
 
-// Função para clonar os slides de telefones no carrossel
-function cloneSlidesFonesOnce() {
-  const carouselFones = document.querySelector(".fones-carousel");
-  const slidesArrayFones = Array.from(slidesFones);
+const carousel = document.querySelector(".carousel");
+const slidesArray = Array.from(slides);
 
-  slidesArrayFones.forEach((slide) => {
-    const clone = slide.cloneNode(true);
-    carouselFones.appendChild(clone);
-  });
-}
+slidesArray.forEach((slide) => {
+  const clone = slide.cloneNode(true);
+  carousel.appendChild(clone);
+});
 
-// Função para mover os slides de telefones no carrossel
 function moveSlideFones(direction) {
   currentIndexFones += direction;
 
@@ -56,10 +43,38 @@ function moveSlideFones(direction) {
   }
 
   const newPosition = -(currentIndexFones * slideWidthFones) / 0.91 + "px";
-  document.querySelector(".fones-carousel").style.transform = `translateX(${newPosition})`;
+  document.querySelector(
+    ".fones-carousel"
+  ).style.transform = `translateX(${newPosition})`;
 }
 
-// Função para animar o scroll até um elemento específico na página
+function cloneSlidesFonesOnce() {
+  const carouselFones = document.querySelector(".fones-carousel");
+  const slidesArrayFones = Array.from(slidesFones);
+
+  slidesArrayFones.forEach((slide) => {
+    const clone = slide.cloneNode(true);
+    carouselFones.appendChild(clone);
+  });
+}
+
+window.onload = function () {
+  cloneSlidesFonesOnce();
+};
+
+function showSlides() {
+  let slides = document.getElementsByClassName("mySlides");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 1500);
+}
+
 function scrollToTarget(element, duration) {
   var target = document.querySelector(element);
   var targetPosition = target.getBoundingClientRect().top;
@@ -85,16 +100,14 @@ function scrollToTarget(element, duration) {
   requestAnimationFrame(animation);
 }
 
-// Adiciona evento de clique para links internos na página para animar o scroll
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
     var targetId = this.getAttribute("href");
-    scrollToTarget(targetId, 1000); // Define a duração da animação de scroll (1000 milissegundos = 1 segundo)
+    scrollToTarget(targetId, 1000);
   });
 });
 
-// Adiciona evento de clique para detalhes (summary) para fechar outros detalhes quando um é aberto
 document.addEventListener("DOMContentLoaded", function () {
   const detailsElements = document.querySelectorAll("details");
 
@@ -108,11 +121,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
-// Clona os slides de telefones uma vez após o carregamento da página
-window.onload = function () {
-  cloneSlidesFonesOnce();
-};
-
-// Inicia a função para exibir os slides automaticamente
-showSlides();
