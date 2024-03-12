@@ -145,7 +145,7 @@ main {
   .home {
     width: 80%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 
     .content {
       h1 {
@@ -584,6 +584,14 @@ main {
     img {
       width: 80%;
     }
+  }
+}
+
+@media screen and (max-width: 1568px) {
+  .suport {
+    width: 80%;
+
+    
   }
 }
 @media screen and (max-width: 768px) {

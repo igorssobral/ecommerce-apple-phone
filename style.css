@@ -314,7 +314,7 @@ main {
   .home {
     width: 80%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
   }
   .home .content h1 {
     width: 80%;
@@ -711,6 +711,11 @@ main {
   width: 80%;
 }
 
+@media screen and (max-width: 1568px) {
+  .suport {
+    width: 80%;
+  }
+}
 @media screen and (max-width: 768px) {
   .suport {
     width: 90%;
