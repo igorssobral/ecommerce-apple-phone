@@ -1,6 +1,7 @@
 # Ecommerce Apple
+<p align="center"> <img src="https://portfolio-igor-silva-sobral.vercel.app/assets/ecommerce-UYJhPDan.png" alt="Dev Barber"> </p>
 
-Este é o repositório do projeto Ecommerce Apple, um site fictício de comércio eletrônico para produtos da Apple.
+Este é o projeto Ecommerce Apple, um site fictício de comércio eletrônico para produtos da Apple.
 
 ## Descrição
 
